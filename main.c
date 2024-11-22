@@ -5,9 +5,11 @@ int main(void)
 {
     int opcion;
     int size; // variable para asiganar en la funcion de memoria
-    const char* nombre_archivo = "/home/miltonahdz/CLionProjects/ProyectoFinalGPO/proyecto_final.txt"; //cambiar el directorio de donde tiene al archivo
+    const char* nombre_archivo = "/home/miltonahdz/CLionProjects/ProyectoFinalGPO/proyecto_final.txt";
+    //cambiar el directorio de donde tiene al archivo
 
-    do {
+    do
+    {
         printf("=======================\n");
         printf("===Demo de APIs POSIX en C===\n");
         printf("=======================\n");
@@ -19,27 +21,35 @@ int main(void)
         printf("5. Salir\n");
         scanf("%d", &opcion);
 
-        switch (opcion) {
-            case 1:
-                crear_proceso_hijo();
+        switch (opcion)
+        {
+        case 1:
+            crear_proceso_hijo();
             break;
-            case 2:
-                printf("Ingrese la cantidad de elementos a generar: ");
+        case 2:
+            printf("Ingrese la cantidad de elementos a generar: ");
             scanf("%i", &size);
             gestionarArrayEstructuras(size);
             break;
-            case 3:
-                leerArchivo(nombre_archivo);
+        case 3:
+            printf("=== Leyendo contenido del archivo: '%s' ===\n", nombre_archivo);
+            printf("Intentando abrir el archivo...\n");
+            leerArchivo(nombre_archivo);
+            printf("=== Fin de la lectura ===\n");
             break;
-            case 4:
-                escribirArchivo(nombre_archivo);
+        case 4:
+            printf("=== Escribiendo contenido en el archivo: '%s' ===\n", nombre_archivo);
+            printf("Ingrese el texto que desea agregar al archivo:\n");
+            escribirArchivo(nombre_archivo);
+            printf("=== Fin de la escritura ===\n");
             break;
-            case 5:
-                printf("Saliendo del programa...\n");
+        case 5:
+            printf("Saliendo del programa...\n");
             break;
-            default:
-                printf("Opcion invalida\n");
+        default:
+            printf("Opcion invalida\n");
         }
-    } while (opcion != 5);
+    }
+    while (opcion != 5);
     return 0;
 }

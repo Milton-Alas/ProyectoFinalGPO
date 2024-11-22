@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/wait.h>
+//#include <sys/wait.h>
 #include "posix_demo.h"
 
 void crear_proceso_hijo() {
