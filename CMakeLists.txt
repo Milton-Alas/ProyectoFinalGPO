@@ -7,4 +7,5 @@ add_executable(ProyectoFinalGPO main.c
         posix_demo.h
         posix_process_management.c
         posix_memory_management.c
-        posix_file_operations.c)
+        posix_file_operations.c
+        almacenamiento.c)
